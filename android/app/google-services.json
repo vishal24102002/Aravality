@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "846353640998",
+    "firebase_url": "https://aravali-34df8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "aravali-34df8",
+    "storage_bucket": "aravali-34df8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846353640998:android:c0a05713e2ec7bf1d180e7",
+        "android_client_info": {
+          "package_name": "com.example.aravality"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCX-B7WgIm5o7Lsja_VO5jmskGmOu4D-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846353640998:android:e5d669c2db198473d180e7",
+        "android_client_info": {
+          "package_name": "com.example.new_labour"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCX-B7WgIm5o7Lsja_VO5jmskGmOu4D-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846353640998:android:5450ed4122bb6f5bd180e7",
+        "android_client_info": {
+          "package_name": "com.example.vishal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCX-B7WgIm5o7Lsja_VO5jmskGmOu4D-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
