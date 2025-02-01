@@ -14,7 +14,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:vishal/initial/login.dart';
-import 'package:vishal/initial/login.dart';
 import '../pages/Students/web_ymca.dart';
 import '../services/mysql_api.dart';
 import '../services/notificationService.dart';
@@ -951,7 +950,7 @@ class _HomeState extends State<Home> {
                       },
                       style: const ButtonStyle(
                         fixedSize:
-                            MaterialStatePropertyAll(Size.fromWidth(205)),
+                            WidgetStatePropertyAll(Size.fromWidth(205)),
                       ),
                       icon: const Icon(Icons.supervised_user_circle_rounded),
                       label: const Text("About-Us"),
