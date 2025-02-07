@@ -17,18 +17,16 @@ class _Web_ymcaState extends State<Web_ymca> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 125,
+        toolbarHeight: 90,
         shadowColor: Colors.transparent,
         backgroundColor: Colors.lightGreenAccent,
-        title: const Center(
-          child: Text(
+        title: const Text(
             "Y.M.C.A.",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 30,
+              fontSize: 25,
             ),
           ),
-        ),
       ),
         body: Container(
           // margin: EdgeInsets.only(top:100),

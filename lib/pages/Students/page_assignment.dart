@@ -42,6 +42,7 @@ class _Assignment extends State<Assignment> {
           "Assignments",
           style: TextStyle(
             color: Colors.red,
+            fontSize: 25,
           ),),
       ),
       body: const Expanded(

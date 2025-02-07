@@ -9,9 +9,12 @@ import 'package:vishal/pages/Students/page_bus.dart';
 import 'package:vishal/pages/Students/page_calender.dart';
 import 'package:vishal/pages/Students/page_feereceipt.dart';
 import 'package:vishal/pages/Students/page_report.dart';
+import 'package:vishal/pages/Students/page_timetable.dart';
 import 'package:vishal/pages/Students/payment.dart';
 import 'package:vishal/pages/Students/teacher_acem.dart';
 import 'package:vishal/pages/Students/page_assignment.dart';
+
+import 'common pages/message.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +27,10 @@ Future<void> main() async {
       storageBucket: "aravali-34df8.appspot.com",
     ),
   );
+
+  // await FirebaseAppCheck.instance.activate(
+  //   androidProvider: AndroidProvider.playIntegrity,
+  // );
 
   await AwesomeNotifications().initialize(
     null,
@@ -74,6 +81,8 @@ class MyApp extends StatelessWidget {
         '/payment': (context) => const Pay(),
         '/payment_gateway': (context) => const Pay(),
         '/transport': (context) => const BusPass(),
+        '/chat':(context)=> Message_chat(),
+        '/timetable':(context)=> TimetablePage()
       },
     );
   }

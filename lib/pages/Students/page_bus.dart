@@ -13,16 +13,13 @@ class _BusPassState extends State<BusPass> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
+        toolbarHeight: 90,
         shadowColor: Colors.transparent,
         backgroundColor: Colors.pink[300],
-        title: const Center(
-
-          child: Text(
-            "Buss-Pass",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        title: const Text(
+            "Bus-Pass",
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
-        ),
       ),
       body: Container(
         color: Colors.pink[200],

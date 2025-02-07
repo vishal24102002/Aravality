@@ -17,12 +17,11 @@ class _AutoLoginState extends State<AutoLogin> {
     try{
       var data = await GetRole(user_email_live);
       var roleType = jsonDecode(data);
-      Navigator.pop(context);
       if (roleType[0] == "Teacher") {
-        Navigator.of(context).pushNamed('/home_admin');
+        Navigator.pushNamed(context,'/home_admin');
       }
       else if (roleType[0] == "Student") {
-        Navigator.of(context).pushNamed('/home');
+        Navigator.pushNamed(context,'/home');
       }
     }catch(e){
       const Text("No. Internet Connection",style: TextStyle(color: Colors.red),);

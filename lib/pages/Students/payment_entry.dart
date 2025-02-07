@@ -158,7 +158,7 @@ class _GatewayState extends State<Gateway> {
                       String userroll = _rollcontroller.text;
                       if (userroll.length>=7){
                         Navigator.pop(context);
-                        Navigator.pushNamed(context, '/payment');
+                        Navigator.pushNamed(context, '"com.example.aravality"');
                       }
                       else if (userroll.isEmpty){
                         print("error !!!");

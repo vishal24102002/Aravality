@@ -24,12 +24,12 @@ bool _passwordVisible = true;
 class _LoginPageState extends State<LoginPage> {
   final FirebaseAuthService _auth = FirebaseAuthService();
 
-  // @override
-  // void dispose() {
-  //   _usercontroller.dispose();
-  //   _passcontroller.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _usercontroller.dispose();
+    _passcontroller.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {

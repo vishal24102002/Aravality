@@ -41,7 +41,7 @@ var _profile_color = [
   Colors.green
 ];
 var colours = [
-  Colors.black,
+  Color(0xFF121212),
   Colors.white,
   Colors.grey[600],
   Colors.grey[400],
@@ -53,11 +53,12 @@ var colours = [
 // late VideoPlayerController _vidcontroller;
 var roll_no="";
 var name="";
+var semester="";
 int ree = 0;
 var course="";
 var profile_image_user;
 var paid;
-bool transporter_agree=false;
+bool transporter_agree=false ;
 var contact=0;
 
 class Home extends StatefulWidget {
@@ -287,16 +288,18 @@ class _HomeState extends State<Home> {
   }
 
   void getdetail_email() async{
-    print(user_email);
+    print("driver_answeer");
     var detail_data = await Getdetails(user_email.toLowerCase());
     var stud_data=jsonDecode(detail_data);
     name=stud_data[0];
     roll_no=stud_data[1];
-    course=stud_data[2];
-    ree=stud_data[3];
-    contact=stud_data[4];
-    paid=stud_data[5];
-    transporter_agree=stud_data[6];
+    semester=stud_data[2];
+    course=stud_data[3];
+    ree=stud_data[4];
+    contact=stud_data[5];
+    paid=stud_data[6];
+    transporter_agree=stud_data[8];
+    print(transporter_agree);
     fetch_profile();
     setState(() {});
   }
@@ -555,7 +558,7 @@ class _HomeState extends State<Home> {
                           Text(
                             '$ree',
                             style: const TextStyle(
-                                fontSize: 20,
+                                fontSize: 17,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.red),
                           ),
@@ -577,7 +580,7 @@ class _HomeState extends State<Home> {
                           Text(
                             contact.toString(),
                             style: const TextStyle(
-                                fontSize: 15,
+                                fontSize: 17,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.red),
                           ),
@@ -599,7 +602,7 @@ class _HomeState extends State<Home> {
                           Text(
                             course.toUpperCase(),
                             style: const TextStyle(
-                                fontSize: 20,
+                                fontSize: 17,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.red),
                           ),
@@ -1000,7 +1003,7 @@ class _HomeState extends State<Home> {
             onPressed: () {
               _scaffoldKey.currentState!.openDrawer();
             },
-            icon: Icon(Icons.person_pin,size: 43,color: text_color,),
+            icon: Icon(Icons.person_2_rounded,size: 43,color: text_color,),
           ),
         ),
         actions: [
@@ -1351,10 +1354,16 @@ class _HomeState extends State<Home> {
                                   CircleAvatar(
                                     radius: 25,
                                     backgroundColor: but_menu_color,
-                                    child: const Icon(
-                                      Icons.assignment,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.pushNamed(
+                                            context, '/assignment');
+                                      },
+                                      icon: const Icon(
+                                        Icons.assignment,
                                       size: 30,
                                       color: Colors.white,
+                                    ),
                                     ),
                                   ),
                                   Text(
@@ -1411,10 +1420,16 @@ class _HomeState extends State<Home> {
                                 CircleAvatar(
                                   radius:25,
                                   backgroundColor: but_menu_color,
-                                  child: const Icon(
-                                    Icons.view_comfortable_sharp,
-                                    size: 30,
-                                    color: Colors.white,
+                                  child: IconButton(
+                                    onPressed: () {
+                                      Navigator.pushNamed(
+                                          context, '/timetable');
+                                    },
+                                    icon: const Icon(
+                                      Icons.view_comfortable_sharp,
+                                      size: 30,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                                 Text(
@@ -1435,13 +1450,15 @@ class _HomeState extends State<Home> {
               Visibility(
                 visible: visible_options,
                 child: Container(
-                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 2),
+                  margin: const EdgeInsets.fromLTRB(5, 0, 5, 12),
                   child: Card(
                     color: container_color,
                     elevation: 0.0,
                     child: Column(children: <Widget>[
                       ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/chat');
+                        },
                         icon: const Icon(
                           Icons.chat,
                           color: Colors.yellow,
@@ -1455,19 +1472,19 @@ class _HomeState extends State<Home> {
                         ),
                         label: const Text("Message"),
                       ),
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          sendFCMMessage();
-                        },
-                        icon: const Icon(Icons.task_alt, color: Colors.yellow),
-                        style: const ButtonStyle(
-                          backgroundColor:
-                              WidgetStatePropertyAll(Colors.black),
-                          fixedSize:
-                              WidgetStatePropertyAll(Size.fromWidth(305.0)),
-                        ),
-                        label: const Text(" Book "),
-                      ),
+                      // ElevatedButton.icon(
+                      //   onPressed: () {
+                      //     sendFCMMessage();
+                      //   },
+                      //   icon: const Icon(Icons.task_alt, color: Colors.yellow),
+                      //   style: const ButtonStyle(
+                      //     backgroundColor:
+                      //         WidgetStatePropertyAll(Colors.black),
+                      //     fixedSize:
+                      //         WidgetStatePropertyAll(Size.fromWidth(305.0)),
+                      //   ),
+                      //   label: const Text(" Book "),
+                      // ),
                     ]),
                   ),
                 ),
@@ -1536,8 +1553,8 @@ class _HomeState extends State<Home> {
   }
 
   transporter() {
+    print(transporter_agree);
     if (transporter_agree==true){
-      print(transporter_agree);
       Navigator.pushNamed(context, '/transport');
     }
   }

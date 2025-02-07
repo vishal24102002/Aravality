@@ -43,15 +43,13 @@ class _MyTeachersState extends State<MyTeachers> {
     return Scaffold(
         appBar: AppBar(
           shadowColor: Colors.transparent,
-          toolbarHeight: 125,
+          toolbarHeight: 90,
           foregroundColor: Colors.white,
           backgroundColor: Colors.purple,
-          title:const Center(
-              child: Text(
+          title:const Text(
                       "My-Teachers",
-                    style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
                   ),
-            ),
           ),
         extendBody: true,
         body:Container(

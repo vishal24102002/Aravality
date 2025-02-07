@@ -17,18 +17,16 @@ class _CalenderState extends State<Calender> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 125,
+        toolbarHeight: 90,
         shadowColor: Colors.transparent,
         backgroundColor: Colors.lightGreenAccent,
-        title: const Center(
-          child: Text(
+        title: const Text(
             "Calender",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 30,
+              fontSize: 25,
             ),
           ),
-        ),
       ),
       body: AnimatedContainer(
         padding: const EdgeInsets.only(

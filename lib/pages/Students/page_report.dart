@@ -28,15 +28,13 @@ class _ReportState extends State<Report> {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
-        toolbarHeight: 125,
+        toolbarHeight: 90,
         backgroundColor: Colors.amber,
         shadowColor: Colors.transparent,
-        title: const Center(
-            child: Text(
+        title: const Text(
           "Result",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         )),
-      ),
       body: Container(
         child: AnimatedContainer(
           duration: const Duration(seconds: 1),

@@ -47,13 +47,11 @@ class _AttendanceState extends State<Attendance> {
         toolbarHeight: 80,
         backgroundColor: const Color.fromRGBO(251, 139, 36, 50),
         shadowColor: Colors.transparent,
-        title: const Center(
-          child: Text(
+        title: const Text(
             "Attendance",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ),
-      ),
       extendBody: true,
       body: Container(
         color: Colors.black,

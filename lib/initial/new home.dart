@@ -896,7 +896,7 @@ class _NewHomeState extends State<NewHome> {
                                         child: IconButton(
                                           onPressed: () {
                                             Future.delayed(const Duration(milliseconds: 400), () {
-                                              Navigator.pushNamed(context, '/payment_gateway');
+                                              Navigator.pushNamed(context, '"com.example.aravality"_gateway');
                                             });
                                           },
                                           icon: const Icon(
