@@ -17,5 +17,9 @@ Future GetReport(String Query) async{
 Future Getteachers(String course) async{
   http.Response teacher=await http.get(Uri.parse("https://script.google.com/macros/s/AKfycbxf5c4M82Ax1M4aTTK99IsIjgrWt_eJC46v8ehvWlm5OGMX7E9ixTRzdJBRe287NOJULg/exec?course=$course"));
   return teacher.body;
+}
 
+Future GetPyq(String selectedSemester) async{
+  http.Response teacher=await http.get(Uri.parse("https://script.google.com/macros/s/AKfycbyQvCLwrAkZ2QKkBaiX_oQMRLBdYRphfgCI3vRu5HhsWYt93mxpaKU_Yv1HhD5E9IMpmg/exec?semester_selected=$selectedSemester"));
+  return teacher.body;
 }

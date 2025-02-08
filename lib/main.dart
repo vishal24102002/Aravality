@@ -13,7 +13,7 @@ import 'package:vishal/pages/Students/page_timetable.dart';
 import 'package:vishal/pages/Students/payment.dart';
 import 'package:vishal/pages/Students/teacher_acem.dart';
 import 'package:vishal/pages/Students/page_assignment.dart';
-
+import 'package:vishal/pages/Students/PYQ.dart';
 import 'common pages/message.dart';
 
 Future<void> main() async {
@@ -77,12 +77,13 @@ class MyApp extends StatelessWidget {
         '/calender': (context) => const Calender(),
         '/report': (context) => const Report(),
         '/fee_receipt': (context) => const Fee(),
-        '/assignment': (context) => const Assignment(),
+        '/assignment': (context) => Assignment(),
         '/payment': (context) => const Pay(),
         '/payment_gateway': (context) => const Pay(),
         '/transport': (context) => const BusPass(),
         '/chat':(context)=> Message_chat(),
-        '/timetable':(context)=> TimetablePage()
+        '/timetable':(context)=> TimetablePage(),
+        '/pyq':(context)=> PYQViewPage()
       },
     );
   }

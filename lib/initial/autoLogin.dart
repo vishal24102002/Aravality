@@ -17,6 +17,7 @@ class _AutoLoginState extends State<AutoLogin> {
     try{
       var data = await GetRole(user_email_live);
       var roleType = jsonDecode(data);
+      Navigator.pop(context);
       if (roleType[0] == "Teacher") {
         Navigator.pushNamed(context,'/home_admin');
       }

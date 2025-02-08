@@ -1389,10 +1389,15 @@ class _HomeState extends State<Home> {
                                 CircleAvatar(
                                   radius:25,
                                   backgroundColor: but_menu_color,
-                                  child: const Icon(
-                                    Icons.question_mark_sharp,
+                                  child: IconButton(
+                                    onPressed: () {
+                                      Navigator.pushNamed(
+                                          context, '/pyq');
+                                    },
+                                    icon: const Icon(Icons.question_mark_sharp,
                                     size: 30,
                                     color: Colors.white,
+                                  ),
                                   ),
                                 ),
                                 Column(

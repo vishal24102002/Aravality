@@ -56,7 +56,10 @@ class _Message_chatState extends State<Message_chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Chat")),
+      appBar: AppBar(
+        toolbarHeight: 90,
+          title: const Text("Chat")
+      ),
       body: Column(
         children: [
           // Message List
