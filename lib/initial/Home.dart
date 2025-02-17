@@ -297,9 +297,9 @@ class _HomeState extends State<Home> {
     course=stud_data[3];
     ree=stud_data[4];
     contact=stud_data[5];
-    paid=stud_data[6];
+    paid=double.parse(stud_data[6].toString());
     transporter_agree=stud_data[8];
-    print(transporter_agree);
+    print(paid);
     fetch_profile();
     setState(() {});
   }
@@ -504,7 +504,7 @@ class _HomeState extends State<Home> {
                       Row(
                         children: <Widget>[
                           const Text(
-                            "Age : ",
+                            "Roll No :  ",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold),
                           ),
@@ -512,7 +512,7 @@ class _HomeState extends State<Home> {
                             width: 5,
                           ),
                           Text(
-                            '$age yr',
+                            roll_no,
                             style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
@@ -526,7 +526,7 @@ class _HomeState extends State<Home> {
                       Row(
                         children: <Widget>[
                           const Text(
-                            "Roll No :  ",
+                            "Semester :  ",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold),
                           ),
@@ -534,7 +534,7 @@ class _HomeState extends State<Home> {
                             width: 5,
                           ),
                           Text(
-                            roll_no,
+                            "$semester Semester",
                             style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
@@ -600,7 +600,7 @@ class _HomeState extends State<Home> {
                             width: 8,
                           ),
                           Text(
-                            course.toUpperCase(),
+                            course,
                             style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,

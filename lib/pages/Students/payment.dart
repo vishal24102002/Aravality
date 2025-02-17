@@ -349,7 +349,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:upi_pay/upi_pay.dart';
-
 import '../../initial/Home.dart';
 import '../../initial/autoLogin.dart';
 import '../../initial/login.dart';
@@ -363,7 +362,7 @@ class Pay extends StatefulWidget {
 }
 
 var user_email;
-double paid = 0.0;
+// double paid = 0.0;
 final upiPay = UpiPay();
 
 class _PayState extends State<Pay> {
@@ -377,11 +376,11 @@ class _PayState extends State<Pay> {
   void initState() {
     super.initState();
     _fetchUserEmail();
-    _fetchUserPaymentDetails();
+    // _fetchUserPaymentDetails();
     _fetchInstalledUpiApps();
 
     dropdownValue_stream = course;
-    if (["CSE", "AIML", "EC"].contains(dropdownValue_stream)) {
+    if (["BTech-CSE", "BTech-AIML", "EC"].contains(dropdownValue_stream)) {
       payAmount = paid;
     }
   }
@@ -525,6 +524,13 @@ class _PayState extends State<Pay> {
                           height: 8,
                         ),
                         Text(
+                          "Semester",
+                          style: TextStyle(fontSize: 15),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
                           "Roll No.",
                           style: TextStyle(fontSize: 15),
                         ),
@@ -544,6 +550,13 @@ class _PayState extends State<Pay> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          " : ",
+                          style: TextStyle(fontSize: 15),
+                        ),
                         SizedBox(
                           height: 8,
                         ),
@@ -597,6 +610,14 @@ class _PayState extends State<Pay> {
                         ),
                         Text(
                           course,
+                          style: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          semester,
                           style: const TextStyle(
                               fontSize: 15, fontWeight: FontWeight.bold),
                         ),
